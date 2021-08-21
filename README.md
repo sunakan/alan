@@ -89,3 +89,12 @@ $ diff -rq app app-slim | grep -E "^Files " | cut -d' ' -f2 | grep -v README | g
 |config/application.rb|sprocketsとtestが消えてる(slimの方)|
 |config/environments/development.rb|assetsの設定が消えてる(slimの方)|
 |config/environments/production.rb|assetsの設定が消えてる(slimの方)|
+
+
+どっちにしか無いファイル
+
+```
+$ diff -rq app app-slim | grep 'Only in'
+Only in app/config/initializers: assets.rb
+Only in app: test
+```
